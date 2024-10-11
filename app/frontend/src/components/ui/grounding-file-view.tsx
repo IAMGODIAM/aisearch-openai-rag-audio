@@ -24,23 +24,23 @@ export default function GroundingFileView({ groundingFile, onClosed }: Propertie
                         initial={{ scale: 0.9, y: 20 }}
                         animate={{ scale: 1, y: 0 }}
                         exit={{ scale: 0.9, y: 20 }}
-                        className="flex max-h-[90vh] w-full max-w-2xl flex-col rounded-lg bg-white p-6"
+                        className="flex max-h-[90vh] w-full max-w-2xl flex-col rounded-lg bg-beige p-6" // Updated background to beige
                         onClick={e => e.stopPropagation()}
                     >
                         <div className="mb-4 flex items-center justify-between">
-                            <h2 className="text-xl font-bold">{groundingFile.name}</h2>
+                            <h2 className="text-xl font-bold text-darkGreen">{groundingFile.name}</h2> {/* Updated text color */}
                             <Button
                                 aria-label="Close grounding file view"
                                 variant="ghost"
                                 size="sm"
-                                className="text-gray-500 hover:text-gray-700"
+                                className="text-gray hover:text-darkGreen" // Updated hover effect to dark green
                                 onClick={() => onClosed()}
                             >
                                 <X className="h-5 w-5" />
                             </Button>
                         </div>
                         <div className="flex-grow overflow-hidden">
-                            <pre className="h-[40vh] overflow-auto text-wrap rounded-md bg-gray-100 p-4 text-sm">
+                            <pre className="h-[40vh] overflow-auto text-wrap rounded-md bg-gray-100 p-4 text-sm text-darkGreen"> {/* Updated text color */}
                                 <code>{groundingFile.content}</code>
                             </pre>
                         </div>

@@ -1,7 +1,5 @@
 import { AnimatePresence, motion, Variants } from "framer-motion";
-
 import { GroundingFile as GroundingFileType } from "@/types";
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./card";
 import GroundingFile from "./grounding-file";
 import { useRef } from "react";
@@ -11,6 +9,7 @@ type Properties = {
     onSelected: (file: GroundingFileType) => void;
 };
 
+// Variants for the animation using framer-motion
 const variants: Variants = {
     hidden: { opacity: 0, scale: 0.8, y: 20 },
     visible: (i: number) => ({
@@ -35,10 +34,10 @@ export function GroundingFiles({ files, onSelected }: Properties) {
     const isAnimating = useRef(false);
 
     return (
-        <Card className="m-4 max-w-full md:max-w-md lg:min-w-96 lg:max-w-2xl">
+        <Card className="m-4 max-w-full md:max-w-md lg:min-w-96 lg:max-w-2xl bg-beige border-gray"> {/* Updated Card colors */}
             <CardHeader>
-                <CardTitle className="text-xl">Grounding files</CardTitle>
-                <CardDescription>Files used to ground the answers.</CardDescription>
+                <CardTitle className="text-xl text-darkGreen">Grounding Files</CardTitle> {/* Updated title text color */}
+                <CardDescription className="text-gray">Files used to ground the answers.</CardDescription> {/* Updated description text color */}
             </CardHeader>
             <CardContent>
                 <AnimatePresence>
@@ -54,7 +53,7 @@ export function GroundingFiles({ files, onSelected }: Properties) {
                         <div className="flex flex-wrap gap-2">
                             {files.map((file, index) => (
                                 <motion.div key={index} variants={variants} initial="hidden" animate="visible" custom={index}>
-                                    <GroundingFile key={index} value={file} onClick={() => onSelected(file)} />
+                                    <GroundingFile key={index} value={file} onClick={() => onSelected(file)} /> {/* Uses updated GroundingFile */}
                                 </motion.div>
                             ))}
                         </div>

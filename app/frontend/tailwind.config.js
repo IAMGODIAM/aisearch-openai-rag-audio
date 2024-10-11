@@ -49,7 +49,13 @@ export default {
                     3: "hsl(var(--chart-3))",
                     4: "hsl(var(--chart-4))",
                     5: "hsl(var(--chart-5))"
-                }
+                },
+                // New color palette for the project
+                beige: '#E2DBD3',
+                darkGreen: '#293D1B',
+                golden: '#B7954D',
+                black: '#010101',
+                gray: '#727272',
             },
             fontSize: {
                 "7xl": ["4.5rem", { lineHeight: "1.3" }],

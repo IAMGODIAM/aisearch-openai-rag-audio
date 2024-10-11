@@ -13,6 +13,7 @@
 
 @layer base {
     :root {
+        /* Existing color definitions */
         --background: 0 0% 100%;
         --foreground: 0 0% 3.9%;
         --card: 0 0% 100%;
@@ -38,8 +39,17 @@
         --chart-4: 43 74% 66%;
         --chart-5: 27 87% 67%;
         --radius: 0.5rem;
+
+        /* New brand color variables */
+        --color-beige: #E2DBD3;
+        --color-dark-green: #293D1B;
+        --color-golden: #B7954D;
+        --color-black: #010101;
+        --color-gray: #727272;
     }
+
     .dark {
+        /* Dark mode colors */
         --background: 0 0% 3.9%;
         --foreground: 0 0% 98%;
         --card: 0 0% 3.9%;
@@ -64,6 +74,13 @@
         --chart-3: 30 80% 55%;
         --chart-4: 280 65% 60%;
         --chart-5: 340 75% 55%;
+
+        /* Dark mode brand colors */
+        --color-beige: #E2DBD3; /* Stays the same in dark mode */
+        --color-dark-green: #556C3A; /* Slightly lighter dark green for dark mode */
+        --color-golden: #A37F3B; /* Slightly muted golden for dark mode */
+        --color-black: #F5F5F5; /* Inverted to light for dark mode foreground */
+        --color-gray: #A1A1A1; /* Lighter gray for dark mode */
     }
 }
 
